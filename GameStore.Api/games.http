@@ -1,0 +1,16 @@
+###
+GET http://localhost:5127/games
+
+###
+GET http://localhost:5127/games/4
+
+###
+POST http://localhost:5127/games
+Content-Type: application/json
+
+{
+    "name": "Raji: An Ancient Epic", 
+    "genre": "Action Adventure", 
+    "price": 24.99, 
+    "releaseDate": "2020-08-18"
+}
