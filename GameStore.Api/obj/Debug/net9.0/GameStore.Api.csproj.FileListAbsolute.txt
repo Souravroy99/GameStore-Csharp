@@ -25,3 +25,4 @@ D:\GameStore\GameStore.Api\GameStore.Api\obj\Debug\net9.0\refint\GameStore.Api.d
 D:\GameStore\GameStore.Api\GameStore.Api\obj\Debug\net9.0\GameStore.Api.pdb
 D:\GameStore\GameStore.Api\GameStore.Api\obj\Debug\net9.0\GameStore.Api.genruntimeconfig.cache
 D:\GameStore\GameStore.Api\GameStore.Api\obj\Debug\net9.0\ref\GameStore.Api.dll
+d:\GameStore\GameStore.Api\GameStore.Api\obj\Debug\net9.0\GameStore.Api.sourcelink.json

@@ -13,13 +13,13 @@ List<GameDto> games = [
         "Elden Ring",
         "Action RPG",
         59.99m,
-        new DateOnly(2022, 2, 25)),
+        new DateOnly(2022, 02, 25)), // Year, Month, Date
     new(
         2,
         "Hollow Knight",
         "Metroidvania",
         14.99m,
-        new DateOnly(2017, 2, 24)),
+        new DateOnly(2017, 02, 24)),
     new(
         3,
         "God of War Ragnarök",
@@ -31,8 +31,14 @@ List<GameDto> games = [
 // GET /games
 app.MapGet("games", () => games);
 
+
 // GET /games/1
-app.MapGet("games/{id}", (int id) => games.Find(game => game.Id == id)).WithName(GetGameEndpointName);
+app.MapGet("games/{id}", (int id) => {
+    GameDto? game = games.Find(game => game.Id == id);
+
+    return game is null ? Results.NotFound() : Results.Ok(game);
+})
+.WithName(GetGameEndpointName);
 
 
 // POST /games
@@ -49,6 +55,45 @@ app.MapPost("games", (CreateGameDto newGame) =>
     games.Add(game);
 
     return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
+    /*
+        Results.CreatedAtRoute(
+            string routeName,
+            object? routeValues,
+            object? value
+        )
+    */
+
+});
+
+
+// PUT /games/1
+app.MapPut("games/{id}", (int id, UpdateGameDto updateGame) =>
+{
+    var index = games.FindIndex((game) => game.Id == id);
+
+    if(index == -1)
+    {
+        return Results.NotFound();
+    }
+
+    games[index] = new(
+        id,
+        updateGame.Name,
+        updateGame.Genre,
+        updateGame.Price,
+        updateGame.ReleaseDate
+    );
+
+    return Results.NoContent();
+});
+
+
+// DELETE /games/1
+app.MapDelete("games/{id}", (int id) =>
+{
+    games.RemoveAll((game) => game.Id == id);
+
+    return Results.NoContent();
 });
 
 app.Run();

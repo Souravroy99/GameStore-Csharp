@@ -1,10 +1,12 @@
 ###
 GET http://localhost:5127/games
 
-###
-GET http://localhost:5127/games/4
 
 ###
+GET http://localhost:5127/games/1
+
+
+### 
 POST http://localhost:5127/games
 Content-Type: application/json
 
@@ -14,3 +16,20 @@ Content-Type: application/json
     "price": 24.99, 
     "releaseDate": "2020-08-18"
 }
+
+
+###
+PUT http://localhost:5127/games/1
+Content-Type: application/json
+
+{
+"id": 1,
+"name": "KGF",
+"genre": "Action",
+"price": 999.99,
+"releaseDate": "2022-02-25"
+}
+
+
+###
+DELETE http://localhost:5127/games/2
