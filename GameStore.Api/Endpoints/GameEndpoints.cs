@@ -1,5 +1,6 @@
-using GameStore.Api.Dtos;
+// Entity Framework Core ---> A lightweight, extensible, open source and cross-platform Object-Relational Mapper(ORM) for .NET.
 
+using GameStore.Api.Dtos;
 namespace GameStore.Api.Endpoints;
 
 public static class GameEndpoints
@@ -110,5 +111,4 @@ public static class GameEndpoints
 
         return group;
     }
-
 }

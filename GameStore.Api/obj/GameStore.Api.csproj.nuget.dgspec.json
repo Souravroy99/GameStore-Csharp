@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj": {}
+    "D:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj": {}
   },
   "projects": {
-    "d:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj": {
+    "D:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj",
+        "projectUniqueName": "D:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj",
         "projectName": "GameStore.Api",
-        "projectPath": "d:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj",
+        "projectPath": "D:\\GameStore\\GameStore.Api\\GameStore.Api\\GameStore.Api.csproj",
         "packagesPath": "C:\\Users\\soura\\.nuget\\packages\\",
-        "outputPath": "d:\\GameStore\\GameStore.Api\\GameStore.Api\\obj\\",
+        "outputPath": "D:\\GameStore\\GameStore.Api\\GameStore.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "MinimalApis.Extensions": {
               "target": "Package",
               "version": "[0.11.0, )"
